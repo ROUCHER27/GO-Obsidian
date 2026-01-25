@@ -1,0 +1,150 @@
+{
+  "nodes": [
+    {
+      "id": "title-node",
+      "type": "text",
+      "text": "# {文章标题}\n\n{副标题或简介}",
+      "x": -400,
+      "y": -800,
+      "width": 900,
+      "height": 160,
+      "color": "1"
+    },
+    {
+      "id": "concept-1",
+      "type": "text",
+      "text": "## 核心概念 1\n\n{概念说明}",
+      "x": -500,
+      "y": -500,
+      "width": 400,
+      "height": 280,
+      "color": "4"
+    },
+    {
+      "id": "concept-2",
+      "type": "text",
+      "text": "## 核心概念 2\n\n{概念说明}",
+      "x": 100,
+      "y": -500,
+      "width": 400,
+      "height": 280,
+      "color": "4"
+    },
+    {
+      "id": "detail-1",
+      "type": "text",
+      "text": "### 详细内容 1\n\n{详细说明}",
+      "x": -500,
+      "y": -150,
+      "width": 400,
+      "height": 300,
+      "color": "3"
+    },
+    {
+      "id": "detail-2",
+      "type": "text",
+      "text": "### 详细内容 2\n\n{详细说明}",
+      "x": 100,
+      "y": -150,
+      "width": 400,
+      "height": 300,
+      "color": "3"
+    },
+    {
+      "id": "formula",
+      "type": "text",
+      "text": "## 核心公式\n\n```\n{公式或代码}\n```",
+      "x": -200,
+      "y": 250,
+      "width": 500,
+      "height": 250,
+      "color": "5"
+    },
+    {
+      "id": "summary",
+      "type": "text",
+      "text": "## 总结\n\n{核心要点总结}\n\n- 要点 1\n- 要点 2\n- 要点 3",
+      "x": -200,
+      "y": 580,
+      "width": 500,
+      "height": 300,
+      "color": "6"
+    },
+    {
+      "id": "source-link",
+      "type": "link",
+      "url": "https://原文链接",
+      "x": -400,
+      "y": 960,
+      "width": 350,
+      "height": 100
+    },
+    {
+      "id": "related-note",
+      "type": "file",
+      "file": "{文章标题} - 阅读笔记.md",
+      "x": 50,
+      "y": 960,
+      "width": 350,
+      "height": 150
+    }
+  ],
+  "edges": [
+    {
+      "id": "e-title-c1",
+      "fromNode": "title-node",
+      "fromSide": "bottom",
+      "toNode": "concept-1",
+      "toSide": "top",
+      "color": "1"
+    },
+    {
+      "id": "e-title-c2",
+      "fromNode": "title-node",
+      "fromSide": "bottom",
+      "toNode": "concept-2",
+      "toSide": "top",
+      "color": "1"
+    },
+    {
+      "id": "e-c1-d1",
+      "fromNode": "concept-1",
+      "fromSide": "bottom",
+      "toNode": "detail-1",
+      "toSide": "top",
+      "color": "4"
+    },
+    {
+      "id": "e-c2-d2",
+      "fromNode": "concept-2",
+      "fromSide": "bottom",
+      "toNode": "detail-2",
+      "toSide": "top",
+      "color": "4"
+    },
+    {
+      "id": "e-d1-formula",
+      "fromNode": "detail-1",
+      "fromSide": "bottom",
+      "toNode": "formula",
+      "toSide": "top",
+      "color": "3"
+    },
+    {
+      "id": "e-d2-formula",
+      "fromNode": "detail-2",
+      "fromSide": "bottom",
+      "toNode": "formula",
+      "toSide": "top",
+      "color": "3"
+    },
+    {
+      "id": "e-formula-summary",
+      "fromNode": "formula",
+      "fromSide": "bottom",
+      "toNode": "summary",
+      "toSide": "top",
+      "color": "5"
+    }
+  ]
+}
