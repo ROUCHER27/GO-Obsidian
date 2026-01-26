@@ -155,23 +155,48 @@ Edge color matches **source node** color, forming visual flow lines:
 
 ### Validation Steps
 
+> [!danger] MANDATORY JSON CHECK:
+> After writing .canvas file, you MUST validate it's valid JSON
+
+1. **Parse JSON** - Use any JSON parser to verify no syntax errors
+2. **Check for unescaped quotes** in all text fields (escape all double quotes as `\`)
+3. **Ensure all strings are properly escaped**
+4. **Read back the file** after writing
+5. **Verify no trailing commas, proper brackets**
+6. **Check all node IDs are unique**
+7. **Check all edge references point to existing nodes**
+
 > [!danger] MANDATORY COLOR CHECK:
 > - [ ] Canvas uses AT LEAST 3 different colors
 > - [ ] Not monochromatic (not all white/gray)
 > - [ ] Color variety is visible
 > - [ ] Each color corresponds to actual node (not empty)
 
-1. **Read back the file** after writing
-2. **Verify valid JSON** (no trailing commas, proper brackets)
-3. **Check all node IDs are unique**
-4. **Check all edge references point to existing nodes**
-
 ### Common Issues to Avoid
 
-- Missing commas between array elements
-- Unescaped special characters in text
+- **Unescaped double quotes in `text` fields** (MOST COMMON ERROR)
+- Trailing commas in arrays/objects
+- Missing commas between elements
 - `fromNode`/`toNode` referencing non-existent IDs
 - Duplicate node IDs
 
 > [!important] If Validation Fails
-> Fix issues immediately before telling user the Canvas is complete.
+> Fix issues immediately before telling user the Canvas is complete. If JSON parsing errors occur, refer to `syntax/json-canvas.md` for proper JSON Canvas syntax specifications.
+
+### Linking to Article Notes (File Nodes)
+
+When adding a link node to connect Canvas to the article note file:
+
+```json
+{
+  "id": "article-link",
+  "type": "file",
+  "file": "{{ARTICLE_TITLE}}.md",
+  "x": 0,
+  "y": 1200,
+  "width": 400,
+  "height": 80
+}
+```
+
+**IMPORTANT**: File nodes linking to article notes MUST include `.md` extension in the `file` field, e.g., `My Article.md`

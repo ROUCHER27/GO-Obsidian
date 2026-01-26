@@ -77,11 +77,14 @@ Before creating files:
 6. Check consistency
    → If request differs from user-habits.md, ask if habits should be updated after task completion
 
-7. End-of-task checks
+7. End-of-task checks (MANDATORY)
    → Ask user: "Do you want me to update your preferences in user-habits.md?"
    → Glob scan for `*.base` files in vault
      - If no Reading Tracker found, ask: "No Reading Tracker found. Create one?"
      - If agreed, create based on templates/reading-tracker.base
+   → **VALIDATE all generated .canvas files** using the validation script
+     - Run: `/Users/roucher/.claude/skills/go-obsidian/scripts/validate-canvas.sh`
+     - Fix any JSON errors or validation warnings before completion
    → Confirm all files created successfully
 ```
 
@@ -139,6 +142,8 @@ Before creating files:
 - **Structure is flexible** - Model decides organization based on content
 - Use appropriate Callouts, mermaid diagrams, tables as needed
 - Add Canvas wikilink with AI-chosen name
+  - Canvas filename MUST include `.canvas` extension (e.g., `Article Title - Canvas.canvas`)
+  - Wikilink in notes MUST NOT include extension (e.g., `[[Article Title - Canvas]]`)
 
 ### Canvas (.canvas)
 
@@ -147,3 +152,7 @@ Before creating files:
 - Detailed layout specs refer to `rules/canvas.md`
 - Add link node pointing to original
 - Use MULTIPLE colors (refer to Color Guidelines)
+- **IMPORTANT**: When linking to article notes from Canvas, use file nodes with `.md` extension:
+  ```json
+  { "type": "file", "file": "Article Name.md" }
+  ```
