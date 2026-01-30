@@ -32,23 +32,21 @@ Simply provide a URL or file path, and go-obsidian will generate a professional,
 
 **Method 1: Via Plugin Marketplace (Recommended)**
 
-```bash
-/plugin install go-obsidian
-```
-
-Or add via marketplace:
+Add the marketplace and install the plugin:
 ```bash
 /plugin marketplace add roucher27/go-obsidian
+/plugin install go-obsidian@roucher27-plugins
 ```
 
-**Method 2: Manual Installation**
+**Method 2: Local Installation (For Development)**
 
-Clone this repository to your Claude Code skills directory:
+Clone this repository and add as a local marketplace:
 ```bash
-git clone https://github.com/ROUCHER27/GO-Obsidian.git ~/.claude/skills/go-obsidian
+git clone https://github.com/ROUCHER27/GO-Obsidian.git
+cd GO-Obsidian
+/plugin marketplace add .
+/plugin install go-obsidian@roucher27-plugins
 ```
-
-The skill will be automatically detected by Claude Code.
 
 ### Basic Usage
 
@@ -74,25 +72,36 @@ Claude will:
 ## Project Structure
 
 ```
-go-obsidian/
-├── SKILL.md                 # Main skill definition
-├── user-habits.md           # User preferences (auto-learned)
-├── references.md            # Official documentation links
-├── rules/
-│   ├── canvas.md            # Canvas layout specifications
-│   ├── content-types.md     # Content type detection rules
-│   ├── fidelity.md          # Source fidelity guidelines
-│   └── frontmatter.md       # Frontmatter conventions
-├── syntax/
-│   ├── obsidian-markdown.md # Obsidian Markdown syntax
-│   ├── json-canvas.md       # JSON Canvas specification
-│   └── obsidian-bases.md    # Obsidian Bases syntax
-├── templates/
-│   ├── canvas.json          # Canvas template
-│   ├── reading-tracker.base # Reading tracker template
-│   └── summary.md           # Summary note template
-└── scripts/
-    └── validate-canvas.sh   # Canvas validation script
+GO-Obsidian/
+├── .claude-plugin/
+│   └── marketplace.json     # Plugin marketplace configuration
+├── plugins/
+│   └── go-obsidian/         # Main plugin directory
+│       ├── .claude-plugin/
+│       │   └── plugin.json  # Plugin manifest
+│       ├── skills/
+│       │   └── go-obsidian/
+│       │       └── SKILL.md # Main skill definition
+│       ├── rules/           # Rule definitions
+│       │   ├── canvas.md            # Canvas layout specifications
+│       │   ├── content-types.md     # Content type detection rules
+│       │   ├── fidelity.md          # Source fidelity guidelines
+│       │   └── frontmatter.md       # Frontmatter conventions
+│       ├── syntax/          # Syntax specifications
+│       │   ├── obsidian-markdown.md # Obsidian Markdown syntax
+│       │   ├── json-canvas.md       # JSON Canvas specification
+│       │   └── obsidian-bases.md    # Obsidian Bases syntax
+│       ├── templates/       # Template files
+│       │   ├── canvas.json          # Canvas template
+│       │   ├── reading-tracker.base # Reading tracker template
+│       │   └── summary.md           # Summary note template
+│       ├── scripts/
+│       │   └── validate-canvas.sh   # Canvas validation script
+│       ├── user-habits.md   # User preferences (auto-learned)
+│       └── references.md    # Official documentation links
+├── README.md                # Project documentation
+├── LICENSE.md               # MIT License
+└── *.png                    # Screenshots and workflow diagrams
 ```
 
 ## Configuration

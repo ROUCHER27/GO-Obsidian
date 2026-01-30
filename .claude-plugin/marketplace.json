@@ -1,18 +1,24 @@
 {
-  "name": "go-obsidian",
-  "description": "Transform any article into structured Obsidian notes with visual Canvas diagrams and reading progress management",
-  "version": "1.0.0",
-  "author": "ROUCHER27",
-  "repository": "https://github.com/ROUCHER27/GO-Obsidian",
-  "tags": [
-    "obsidian",
-    "knowledge-management",
-    "reading",
-    "summarization",
-    "canvas",
-    "productivity"
-  ],
-  "entry": "SKILL.md",
-  "icon": "📚",
-  "license": "MIT"
+  "name": "roucher27-plugins",
+  "owner": {
+    "name": "ROUCHER27"
+  },
+  "metadata": {
+    "description": "Personal knowledge management and productivity plugins for Claude Code",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "go-obsidian",
+      "source": "./plugins/go-obsidian",
+      "description": "Transform any article into structured Obsidian notes with visual Canvas diagrams and reading progress management",
+      "version": "1.0.0",
+      "author": {
+        "name": "ROUCHER27"
+      },
+      "repository": "https://github.com/ROUCHER27/GO-Obsidian",
+      "license": "MIT",
+      "tags": ["obsidian", "knowledge-management", "reading", "summarization", "canvas", "productivity"]
+    }
+  ]
 }

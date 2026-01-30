@@ -32,23 +32,21 @@ go-obsidian 是一个Skill，它不仅仅是一个文章总结工具，更是你
 
 **方式 1：通过插件市场安装（推荐）**
 
-```bash
-/plugin install go-obsidian
-```
-
-或通过marketplace添加：
+添加市场并安装插件：
 ```bash
 /plugin marketplace add roucher27/go-obsidian
+/plugin install go-obsidian@roucher27-plugins
 ```
 
-**方式 2：手动安装**
+**方式 2：本地安装（用于开发）**
 
-将本仓库克隆到 Claude Code 技能目录：
+克隆本仓库并添加为本地市场：
 ```bash
-git clone https://github.com/ROUCHER27/GO-Obsidian.git ~/.claude/skills/go-obsidian
+git clone https://github.com/ROUCHER27/GO-Obsidian.git
+cd GO-Obsidian
+/plugin marketplace add .
+/plugin install go-obsidian@roucher27-plugins
 ```
-
-Claude Code 会自动检测该技能。
 
 ### 基本使用
 
@@ -74,25 +72,36 @@ Claude 会：
 ## 项目结构
 
 ```
-go-obsidian/
-├── SKILL.md                 # 主技能定义，包含对其他文件夹性质以及索引规则
-├── user-habits.md           # 用户偏好（主动、持续学习=>long-term memory）
-├── references.md            # 官方文档链接
-├── rules/
-│   ├── canvas.md            # Canvas 布局规范
-│   ├── content-types.md     # 内容类型检测规则
-│   ├── fidelity.md          # 内容忠实度原则
-│   └── frontmatter.md       # Frontmatter 规范
-├── syntax/
-│   ├── obsidian-markdown.md # Obsidian Markdown 语法
-│   ├── json-canvas.md       # JSON Canvas 规范
-│   └── obsidian-bases.md    # Obsidian Bases 语法
-├── templates/
-│   ├── canvas.json          # Canvas 模板
-│   ├── reading-tracker.base # 阅读追踪器模板
-│   └── summary.md           # 总结笔记模板
-└── scripts/
-    └── validate-canvas.sh   # Canvas 验证脚本
+GO-Obsidian/
+├── .claude-plugin/
+│   └── marketplace.json     # 插件市场配置
+├── plugins/
+│   └── go-obsidian/         # 主插件目录
+│       ├── .claude-plugin/
+│       │   └── plugin.json  # 插件清单
+│       ├── skills/
+│       │   └── go-obsidian/
+│       │       └── SKILL.md # 主技能定义
+│       ├── rules/           # 规则定义
+│       │   ├── canvas.md            # Canvas 布局规范
+│       │   ├── content-types.md     # 内容类型检测规则
+│       │   ├── fidelity.md          # 内容忠实度原则
+│       │   └── frontmatter.md       # Frontmatter 规范
+│       ├── syntax/          # 语法规范
+│       │   ├── obsidian-markdown.md # Obsidian Markdown 语法
+│       │   ├── json-canvas.md       # JSON Canvas 规范
+│       │   └── obsidian-bases.md    # Obsidian Bases 语法
+│       ├── templates/       # 模板文件
+│       │   ├── canvas.json          # Canvas 模板
+│       │   ├── reading-tracker.base # 阅读追踪器模板
+│       │   └── summary.md           # 总结笔记模板
+│       ├── scripts/
+│       │   └── validate-canvas.sh   # Canvas 验证脚本
+│       ├── user-habits.md   # 用户偏好（自动学习）
+│       └── references.md    # 官方文档链接
+├── README.md                # 项目文档
+├── LICENSE.md               # MIT 许可证
+└── *.png                    # 截图和工作流程图
 ```
 
 

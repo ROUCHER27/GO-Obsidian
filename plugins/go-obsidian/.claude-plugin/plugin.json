@@ -1,0 +1,12 @@
+{
+  "name": "go-obsidian",
+  "description": "Transform any article into structured Obsidian notes with visual Canvas diagrams and reading progress management",
+  "version": "1.0.0",
+  "author": {
+    "name": "ROUCHER27"
+  },
+  "repository": "https://github.com/ROUCHER27/GO-Obsidian",
+  "license": "MIT",
+  "keywords": ["obsidian", "knowledge-management", "reading", "summarization", "canvas", "productivity"],
+  "commands": ["./skills/go-obsidian"]
+}
