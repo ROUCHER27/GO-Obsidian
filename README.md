@@ -1,7 +1,7 @@
-# Go-obsidian
+# Go-Obsidian
 
 English | [中文](https://github.com/ROUCHER27/GO-Obsidian/blob/main/README_CN.md)
-> A Skill that transforms any article into structured Obsidian notes with visual Canvas diagrams and reading progress management
+> An agent Skill that transforms any article into structured Obsidian notes with visual Canvas diagrams and reading progress management
 
 ![startpage](startpage.png)
 
