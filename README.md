@@ -30,12 +30,25 @@ Simply provide a URL or file path, and go-obsidian will generate a professional,
 
 ### Installation
 
-1. Clone or download this repository to your Claude Code skills directory:
-   ```bash
-   git clone https://github.com/yourusername/go-obsidian.git ~/.claude/skills/go-obsidian
-   ```
+**Method 1: Via Plugin Marketplace (Recommended)**
 
-2. The skill will be automatically detected by Claude Code.
+```bash
+/plugin install go-obsidian
+```
+
+Or add via marketplace:
+```bash
+/plugin marketplace add roucher27/go-obsidian
+```
+
+**Method 2: Manual Installation**
+
+Clone this repository to your Claude Code skills directory:
+```bash
+git clone https://github.com/ROUCHER27/GO-Obsidian.git ~/.claude/skills/go-obsidian
+```
+
+The skill will be automatically detected by Claude Code.
 
 ### Basic Usage
 

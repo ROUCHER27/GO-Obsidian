@@ -30,12 +30,25 @@ go-obsidian 是一个Skill，它不仅仅是一个文章总结工具，更是你
 
 ### 安装
 
-1. 将本仓库克隆或下载到 Claude Code 技能目录：
-   ```bash
-   git clone https://github.com/yourusername/go-obsidian.git ~/.claude/skills/go-obsidian
-   ```
+**方式 1：通过插件市场安装（推荐）**
 
-2. Claude Code 会自动检测该技能。
+```bash
+/plugin install go-obsidian
+```
+
+或通过marketplace添加：
+```bash
+/plugin marketplace add roucher27/go-obsidian
+```
+
+**方式 2：手动安装**
+
+将本仓库克隆到 Claude Code 技能目录：
+```bash
+git clone https://github.com/ROUCHER27/GO-Obsidian.git ~/.claude/skills/go-obsidian
+```
+
+Claude Code 会自动检测该技能。
 
 ### 基本使用
 
