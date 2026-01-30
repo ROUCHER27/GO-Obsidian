@@ -3,7 +3,7 @@
 English | [中文](README_CN)
 > A Skill that transforms any article into structured Obsidian notes with visual Canvas diagrams and reading progress management
 
-![[startpage.png]]
+![startpage](startpage.png)
 
 [![Claude Code](https://img.shields.io/badge/Claude%20Code-Compatible-purple.svg)](https://claude.ai) [![Obsidian](https://img.shields.io/badge/Obsidian-Plugin--Ready-7C3AED.svg)](https://obsidian.md) [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE.md) 
 

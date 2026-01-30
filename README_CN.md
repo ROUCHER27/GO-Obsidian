@@ -2,7 +2,7 @@
 
 > 一个Skill，将任何文章转化为结构化的 Obsidian 笔记和可视化 Canvas 图，并进行阅读进度管理
 
-![[startpage.png]]
+![startpage](startpage.png)
 
 [![Claude Code](https://img.shields.io/badge/Claude%20Code-Compatible-purple.svg)](https://claude.ai) [![Obsidian](https://img.shields.io/badge/Obsidian-Plugin--Ready-7C3AED.svg)](https://obsidian.md) [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE.md)
 
