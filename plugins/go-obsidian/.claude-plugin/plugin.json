@@ -7,5 +7,6 @@
   },
   "repository": "https://github.com/ROUCHER27/GO-Obsidian",
   "license": "MIT",
-  "keywords": ["obsidian", "knowledge-management", "reading", "summarization", "canvas", "productivity"]
+  "keywords": ["obsidian", "knowledge-management", "reading", "summarization", "canvas", "productivity"],
+  "commands": ["./skills/go-obsidian"]
 }
