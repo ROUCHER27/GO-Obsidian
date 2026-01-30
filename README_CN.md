@@ -54,7 +54,7 @@ Claude 会：
 6. 定义笔记属性以更新Reading Tracker.Bases
 
 ## 工作流程
-![[workflow_CN.png]]
+![workflow](workflow_CN.png)
 
 > 💡 *由go-obsidian绘制*
 

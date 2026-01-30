@@ -55,7 +55,7 @@ Claude will:
 
 ## How It Works
 
-![[workflow.png]]
+![workflow](workflow.png)
 > 💡 *Made by Go-Obsidian*
 
 ## Project Structure
